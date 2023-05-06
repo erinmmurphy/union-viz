@@ -1,35 +1,32 @@
-﻿Year,Number of work stoppages in the period,,"Number of workers 
-(in thousands) in the period [1]",,Days of idleness [2],
-,Beginning ,In effect,Beginning,In effect,"Number 
-(in thousands) ",Percent of total working time [3]
+﻿year,works_stoppage_beginning ,work_stoppage_in_effect,workers_by_thousand_beginning_in_period,workers_by_thousand_in_effect_during_period,days of idleness Number (in thousands) ,days of idleness - Percent of total working time [3]
 "
-2008",15,16,72.2,82.7,1954.1,0.01
+2008",15,16,"72,200",82.70,1954.1,0.01
 "
-2009",5,5,12.5,12.5,124.1,[5]
+2009",5,5,"12,500",12.50,124.1,[5]
 "
-2010",11,11,44.5,44.5,302.3,[5]
+2010",11,11,"44,500",44.50,302.3,[5]
 "
-2011",19,19,112.5,112.5,1020.2,[5]
+2011",19,19,"112,500",112.50,1020.2,[5]
 "
-2012",19,21,148.1,150.4,1130.8,[5]
+2012",19,21,"148,100",150.40,1130.8,[5]
 "
-2013",15,15,54.5,54.5,289.9,[5]
+2013",15,15,"54,500",54.50,289.9,[5]
 "
-2014",11,11,34.3,34.3,200.2,[5]
+2014",11,11,"34,300",34.30,200.2,[5]
 "
-2015",12,13,47.3,49.0,740.0,[5]
+2015",12,13,"47,300",49.00,740,[5]
 "
-2016",15,16,99.4,101.6,1543.4,[5]
+2016",15,16,"99,400",101.60,1543.4,[5]
 "
-2017",7,7,25.3,25.3,439.8,[5]
+2017",7,7,"25,300",25.30,439.8,[5]
 "
-2018",20,21,485.2,487.0,2815.4,0.01
+2018",20,21,"485,200",487.00,2815.4,0.01
 "
-2019",25,27,425.5,428.5,3244.3,0.01
+2019",25,27,"425,500",428.50,3244.3,0.01
 "
-2020",8,10,27.0,30.6,965.7,[5]
-2021,16,17,80.7,82.5,1551.9,[5]
-2022,23,26,120.6,126.5,2312.7,0.01
+2020",8,10,"27,000",30.60,965.7,[5]
+2021,16,17,"80,700",82.50,1551.9,[5]
+2022,23,26,"120,600",126.50,2312.7,0.01
 "[1] Number of workers involved includes only those workers who participated in work stoppages in the calendar year. Workers are counted more than once if they are involved in more than one stoppage during the reference period. Numbers are rounded to the nearest thousand. Starting 1981 the numbers are rounded to the nearest hundred.
       
        
