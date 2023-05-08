@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <!-- Load d3.js -->
+    <script src="https://d3js.org/d3.v6.js"></script>
+    <style type="text/css">
+        .label {
+            font-size: 14px;
+            font-weight: normal;
+            font-family: sans-serif;
+        }
+
+        .grid line {
+            stroke: #e6e6e6;
+            stroke-dasharray: 2 2;
+        }
+
+
+        .label {
+            font-size: 14px;
+            font-weight: normal;
+            font-family: sans-serif;
+        }
+
+        .line:hover {
+            fill: navy;
+            opacity: 0.3;
+            stroke: rgb(1, 1, 51);
+            stroke-width: 2;
+            stroke-opacity: 4;
+        }
+
+
+        #tooltip {
+            position: absolute;
+            width: 100px;
+            height: 30px;
+            padding: 2px;
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 12px;
+            font-weight: 350;
+            background: white;
+            border-radius: 8px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- Create a div where the graph will take place -->
+    <div id="elec_area"></div>
+
+    <script>
+
+        const margin = { top: 10, right: 40, bottom: 40, left: 95 },
+            width = 600 - margin.left - margin.right,
+            height = 500 - margin.top - margin.bottom;
+
+        const tooltip3 = d3.select("body")
+            .append("div")
+            .attr("id", "tooltip")
+            .style("opacity", 0);
+
+
+        // append the svg3 object to the body of the page
+        const svg3 = d3.select("body")
+            .append("svg")
+            .attr("width", width + margin.left + margin.right + 200)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", `translate(${margin.left},${margin.top})`);
+
+        //Read the data
+        d3.csv("tallied_yr.csv",
+
+            // When reading the csv, I must format variables:
+            function (d) {
+                return { year: d3.timeParse("%Y")(d.year), elections_tallied: d.elections_tallied }
+            }).then(
+
+                // Now I can use this dataset:
+                function (data) {
+
+                    // Add X axis --> it is a date format
+                    const x = d3.scaleTime()
+                        .domain(d3.extent(data, function (d) { return d.year; }))
+                        .range([15, width]);
+                    svg3.append("g")
+                        .attr("class", "grid")
+                        .attr("transform", `translate(0, ${height + 5})`)
+                        .call(d3.axisBottom(x)
+                            .tickSize(-height, 0)
+                            //.tickFormat("")
+                            //.tickPadding(10)
+                        );
+
+                    // Add Y axis
+                    const y = d3.scaleLinear()
+                        .domain([0, d3.max(data, function (d) { return +d.elections_tallied; })])
+                        .range([height, 0]);
+                    svg3.append("g")
+                        .call(d3.axisLeft(y));
+
+
+                    // Add the area
+                    svg3.append("path")
+                        .datum(data)
+                        .attr("fill", "#440154")
+                        .attr("fill-opacity", 0.06)
+                        .attr("stroke", "#none")
+                        .attr("d", d3.area()
+                            //.curve(d3.curveCardinal)
+                            .x(function (d) { return x(d.year) })
+                            .y0(y(0))
+                            .y1(function (d) { return y(d.elections_tallied) })
+                        )
+                    // add y-axis label        
+                    svg3.append("text")
+                        .attr("text-anchor", "end")
+                        .attr("x", -margin.top - 125)
+                        .attr("y", -margin.left + 55)
+                        .attr("transform", "rotate(-90)")
+                        .attr("fill", "black")
+                        .attr("class", "label")
+                        .text("Number of Elections Tallied");
+
+                    // Add the line
+                    svg3.append("path")
+                        .datum(data)
+                        .attr("fill", "none")
+                        .attr("stroke", "#440154")
+                        .attr("stroke-width", 3)
+                        .attr("d", d3.line()
+                            .x(d => x(d.year))
+                            .y(d => y(d.elections_tallied))
+                        )
+
+                        .on("mouseover", function (event, d) {
+                            d3.select("#tooltip")
+                                .attr("class", "tooltip")
+                                .attr("class", "hover")
+                                .attr("opacity", 0.5)
+                                .attr("stroke", "black")
+                                .attr("stroke-width", 1)
+                                .attr("stroke-opacity", 4);
+                            tooltip3.transition()
+                                .duration(300)
+                                .style("opacity", .9);
+                            tooltip3.html(d.year + "<br/>" + d.elections_tallied)
+                                .style("left", (event.pageX) + "px")
+                                .style("top", (event.pageY - 28) + "px");
+                        })
+
+                        .on("mouseout", (event, d) => {
+                            d3.select("#tooltip")
+                                .transition()
+                                .duration(300)
+                                .style("opacity", 0);
+                        })
+
+                        .on("mousemove", (event, d) => {
+                            d3.select("#tooltip")
+                                .style("left", (event.pageX + 2) + "px")
+                                .style("top", (event.pageY + 2) + "px");
+                        })
+                });
+
+    </script>
+
+</body>
+
+</html>

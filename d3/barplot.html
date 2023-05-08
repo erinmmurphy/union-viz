@@ -14,7 +14,7 @@
             font-family: sans-serif;
         }
 
-        .bars:hover {
+        .hover {
             fill: navy;
             opacity: 0.3;
             stroke: rgb(1, 1, 51);
@@ -127,7 +127,7 @@
 
                 .on("mouseover", function (event, d) {
                     d3.select("#tooltip")
-                        .attr("class", "bars")
+                        .attr("class", "hover")
                         //.attr("fill", "skyblue")
                         .attr("opacity", 0.5)
                         .attr("stroke", "black")
