@@ -39,7 +39,7 @@
 </head>
 
 <body>
-    <h3 style="font-family:sans-serif;">Average Union Density by State 2008-22</h3>
+    <h3 style="font-family:sans-serif;">Total Union Elections Petitions Filed by State 2008-22</h3>
 
     <!-- Create a div where the graph will take place -->
     <div id="my_dataviz"></div>
@@ -65,23 +65,23 @@
             .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
         // Parse the Data
-        d3.csv("g_state_df.csv").then(function (data) {
+        d3.csv("cases_filed_st.csv").then(function (data) {
 
             // sort data
             data.sort(function (b, a) {
-                return a.mem_pct - b.mem_pct;
+                return a.counts - b.counts;
             });
 
             // Add X axis
             const x = d3.scaleLinear()
-                .domain([0, 24])
+                .domain([0, 6000])
                 .range([0, width]);
             svg.append("g")
                 .attr("transform", `translate(0, ${height})`)
                 .call(d3.axisBottom(x))
                 .selectAll("text")
                 .attr("transform", "translate(3,0)rotate(-0)")
-                .style("text-anchor", "end")
+                .style("text-anchor", "right")
                 ;
 
             // Y axis
@@ -99,11 +99,11 @@
                 .attr("text-anchor", "middle")
                 .attr("fill", "black")
                 .attr("class", "label")
-                .text("Percent of Union Members");
+                .text("Number of Petitions Filed");
 
             // const testcolor = d3.scaleOrdinal(d3.schemeSpectral[7])
             //const color2 = d3.scaleSequential(d3.interpolateViridis).domain([23, 2])
-            const color2 = d3.scaleSequential(d3.interpolateBlues).domain([0, 20])
+            const color2 = d3.scaleSequential(d3.interpolatePurples).domain([0, 1500])
             // const  myColor = d3.scaleOrdinal()
             // .domain(data.map((ele, ind) => ind))
             // .range(d3.interpolateViridis[52]);
@@ -122,9 +122,9 @@
                 .join("rect")
                 .attr("x", x(0))
                 .attr("y", d => y(d.state))
-                .attr("width", d => x(d.mem_pct))
+                .attr("width", d => x(d.counts))
                 .attr("height", y.bandwidth())
-                .attr("fill", d => color2(d.mem_pct))
+                .attr("fill", d => color2(d.counts))
 
                 .on("mouseover", function (event, d) {
                     d3.select("#tooltip")
@@ -137,7 +137,7 @@
                     tooltip.transition()
                         .duration(300)
                         .style("opacity", .9);
-                    tooltip.html(d.state + "<br/>" + d.mem_pct + "%")
+                    tooltip.html(d.state + "<br/>" + d.counts)
                         .style("left", (event.pageX) + "px")
                         .style("top", (event.pageY - 28) + "px");
                 })

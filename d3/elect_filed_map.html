@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <h3>Total Union Elections Held by State by State 2008-22</h3>
+    <h3>Total Union Elections Petitions Filed by State 2008-22</h3>
     <script type="text/javascript">
 
         //svg information
@@ -73,7 +73,7 @@
 
         Promise.all([
             d3.json("counties-10m.json"), //topojson's US Atlas file "counties-10m" in topojson from https://github.com/topojson/us-atlas a prebuilt file from US Census Bureau shapefiles
-            d3.csv("elec_tallied_st.csv", function (d) {   //NOTE: this data is from (https://www2.census.gov/programs-surveys/popest/datasets/2020-2021/state/totals/); it is for example only! I did not check that it is accurate or clean--please src your own.
+            d3.csv("cases_filed_st.csv", function (d) {   //NOTE: this data is from (https://www2.census.gov/programs-surveys/popest/datasets/2020-2021/state/totals/); it is for example only! I did not check that it is accurate or clean--please src your own.
                 data.set(d.state, +d.counts)
             })
         ]).then(function (files) {
