@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>US Union Density by State </title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/topojson@3.0.2/dist/topojson.js"></script>
+    <style type="text/css">
+        /**/
+    </style>
+</head>
+
+<body>
+    <h3 style="font-family:sans-serif;">Average Union Density by State 2008-22</h3>
+    <script type="text/javascript">
+
+        //svg information
+        const width = 1200;
+        const height = 600;
+        const svg = d3.select("body")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
+        const g = svg.append("g");
+
+        //projections for our map
+        const projection = d3.geoAlbersUsa() //note how this projection us USA-specific! 
+            .scale(1300) //projection scale
+            .translate([550, 300]); //translate (try changing these and seeing what happens--especially to HI, WA, & AK) 
+
+        //path generator for our map 
+        const geoPath = d3.geoPath(projection);
+
+        //NEW: make a color scale for the fill
+        //think about your color scale--they will change interpretation! see the guide at the end of the deck on scales
+        //important: 1) consider the kind of scale (sequential, quantile, quantize, etc.)
+        //important: 2) consider the ways colors interact to inform your viewer/direct the narrative
+        //const myColor = d3.scaleQuantile()
+        //.domain([1, 25])
+        //.range(d3.schemeYlGnBu[9]);
+        //                     .range(d3.schemePuRd[9]);
+
+        const myColor = d3.scaleSequential()
+            .domain([0, 20])
+            .interpolator(d3.interpolateBlues);
+        // 				   .interpolator(d3.interpolateYlGnBu);
+
+        //const myColor = d3.scaleQuantile() 
+        // 				   .domain([500000, 40000000])
+        // 				   .range(d3.schemePurples[5]);
+
+        //const myColor = d3.scaleQuantize() 
+        //   				.domain([500000, 40000000])
+        //   				.range(d3.schemeGreys[7]);
+        //.range(d3.schemeGreys[3]);
+        //.range(d3.schemeGreys[5]);
+
+        //const myColor = d3.scaleSequential() 
+        //  				.domain([500000, 40000000])
+        //  				.interpolator(d3.interpolateGreys);
+
+        //NEW: format data
+        let data = new Map();
+
+        Promise.all([
+            d3.json("counties-10m.json"), //topojson's US Atlas file "counties-10m" in topojson from https://github.com/topojson/us-atlas a prebuilt file from US Census Bureau shapefiles
+            d3.csv("g_state_df.csv", function (d) {   //NOTE: this data is from (https://www2.census.gov/programs-surveys/popest/datasets/2020-2021/state/totals/); it is for example only! I did not check that it is accurate or clean--please src your own.
+                data.set(d.state, +d.mem_pct)
+            })
+        ]).then(function (files) {
+            let geodata = files[0] // files[0] will contain the geodata
+            console.log(data);
+
+            //make variables to include below
+            //for topo returns GeoJSON features of (topology, specified object) where .features is for GeoJSON too
+            const states = topojson.feature(geodata, geodata.objects.states).features;
+
+            states.filter(d => console.log(d.properties.name)); //see the names of the states in the data in the console
+            console.log(states);
+
+            //make map 
+            g.selectAll("path")
+                .data(states)//open the json file to see how this data is being called
+                .join("path")
+                .attr("d", geoPath)
+                .attr("stroke", "white")//state boarders disappear when white with light fills (again, consider color here)
+                .attr("stroke-width", ".75px")
+                //New: make fills
+                .attr("fill", function (d) {
+                    d.mem_pct = data.get(d.properties.name) || 0;
+                    //console.log(d.properties.name, d.total, myColor(d.total))
+                    return myColor(d.mem_pct);
+                });
+        })
+
+    </script>
+</body>
+
+</html>

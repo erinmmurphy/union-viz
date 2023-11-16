@@ -54,7 +54,7 @@
 
 
     <!-- Create a div where the graph will take place -->
-    <div id="elec_area"></div>
+    <div id="mem_area"></div>
 
     <script>
 
@@ -69,20 +69,20 @@
             .style("opacity", 0);
 
 
-        // append the svg3 object to the body of the page
-        const svg3 = d3.select("#elec_area")
+        // append the svg4 object to the body of the page
+        const svg4 = d3.select("#mem_area")
             .append("svg")
-            .attr("width", width + margin.left + margin.right + 200)
+            .attr("width", width + margin.left + margin.right + 50)
             .attr("height", height + margin.top + margin.bottom)
             .append("g")
             .attr("transform", `translate(${margin.left},${margin.top})`);
 
         //Read the data
-        d3.csv("tallied_yr.csv",
+        d3.csv("u_mem_pct_1983-22.csv",
 
             // When reading the csv, I must format variables:
             function (d) {
-                return { year: d3.timeParse("%Y")(d.year), elections_tallied: d.elections_tallied }
+                return { year: d3.timeParse("%Y")(d.year), u_mem_pct: d.u_mem_pct }
             }).then(
 
                 // Now I can use this dataset:
@@ -91,11 +91,12 @@
                     // Add X axis --> it is a date format
                     const x = d3.scaleTime()
                         .domain(d3.extent(data, function (d) { return d.year; }))
-                        .range([15, width]);
-                    svg3.append("g")
+                        .range([0, width]);
+                    svg4.append("g")
                         .attr("class", "grid")
                         .attr("transform", `translate(0, ${height + 5})`)
                         .call(d3.axisBottom(x)
+                            .ticks(10)
                             .tickSize(-height, 0)
                             //.tickFormat("")
                             //.tickPadding(10)
@@ -103,43 +104,43 @@
 
                     // Add Y axis
                     const y = d3.scaleLinear()
-                        .domain([0, d3.max(data, function (d) { return +d.elections_tallied; })])
+                        .domain([0, d3.max(data, function (d) { return +d.u_mem_pct; }) + 5])
                         .range([height, 0]);
-                    svg3.append("g")
+                    svg4.append("g")
                         .call(d3.axisLeft(y));
 
 
                     // Add the area
-                    svg3.append("path")
+                    svg4.append("path")
                         .datum(data)
-                        .attr("fill", "#440154")
+                        .attr("fill", "#90d743")
                         .attr("fill-opacity", 0.06)
                         .attr("stroke", "#none")
                         .attr("d", d3.area()
                             //.curve(d3.curveCardinal)
                             .x(function (d) { return x(d.year) })
                             .y0(y(0))
-                            .y1(function (d) { return y(d.elections_tallied) })
+                            .y1(function (d) { return y(d.u_mem_pct) })
                         )
                     // add y-axis label        
-                    svg3.append("text")
+                    svg4.append("text")
                         .attr("text-anchor", "end")
                         .attr("x", -margin.top - 125)
                         .attr("y", -margin.left + 55)
                         .attr("transform", "rotate(-90)")
                         .attr("fill", "black")
                         .attr("class", "label")
-                        .text("Number of Elections Tallied");
+                        .text("Union Membership");
 
                     // Add the line
-                    svg3.append("path")
+                    svg4.append("path")
                         .datum(data)
                         .attr("fill", "none")
-                        .attr("stroke", "#440154")
+                        .attr("stroke", "#90d743")
                         .attr("stroke-width", 3)
                         .attr("d", d3.line()
                             .x(d => x(d.year))
-                            .y(d => y(d.elections_tallied))
+                            .y(d => y(d.u_mem_pct))
                         )
 
                         .on("mouseover", function (event, d) {
@@ -153,7 +154,7 @@
                             tooltip3.transition()
                                 .duration(300)
                                 .style("opacity", .9);
-                            tooltip3.html(d.year + "<br/>" + d.elections_tallied)
+                            tooltip3.html(d.year + "<br/>" + d.u_mem_pct)
                                 .style("left", (event.pageX) + "px")
                                 .style("top", (event.pageY - 28) + "px");
                         })
@@ -174,7 +175,7 @@
     </script>
 
     </div>
-    <p class="subtitle is-7 has-text-grey is-centered">Source: National Labor Relations Board</p>
+    <p class="subtitle is-7 has-text-grey is-centered">Source: Bureau of Labor Statistics via Unionstats.com</p>
     </section>
 
 
