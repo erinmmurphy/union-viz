@@ -55,14 +55,14 @@
 
     <!-- Create a div where the graph will take place -->
     <div id="elec_area"></div>
-
+    <div id="tooltip3"></div>
     <script>
 
         const margin = { top: 10, right: 40, bottom: 40, left: 95 },
             width = 600 - margin.left - margin.right,
             height = 500 - margin.top - margin.bottom;
 
-
+        //tooltip outside the svg
         const tooltip3 = d3.select("body")
             .append("div")
             .attr("id", "tooltip")
@@ -160,7 +160,7 @@
 
                         .on("mouseout", (event, d) => {
                             d3.select("#tooltip")
-                                .transition()
+                            tooltip3.transition()
                                 .duration(300)
                                 .style("opacity", 0);
                         })

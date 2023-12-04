@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Load d3.js -->
+    <script src="https://d3js.org/d3.v6.js"></script>
+    <style type="text/css">
+        /* Your CSS styles */
+        .label {
+            font-size: 14px;
+            font-weight: normal;
+            font-family: sans-serif;
+        }
+
+        .grid line {
+            stroke: #e6e6e6;
+            stroke-dasharray: 2 2;
+        }
+
+        .label {
+            font-size: 14px;
+            font-weight: normal;
+            font-family: sans-serif;
+        }
+
+        .legend {
+            font-size: 16px;
+            font-weight: bold;
+            text-anchor: middle;
+        }
+
+        .line:hover {
+            fill: none;
+            stroke: grey;
+            stroke-width: 3;
+            stroke-opacity: 4;
+        }
+
+        .tooltip {
+            position: absolute;
+            width: auto;
+            height: auto;
+            padding: 8px;
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 12px;
+            font-weight: 350;
+            background: whitesmoke;
+            border-radius: 8px;
+            pointer-events: none;
+            display: none;
+            /* Initially hide tooltip */
+        }
+
+        .tooltip-point {
+            fill: none;
+            stroke: white;
+            stroke-width: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <h3 style="font-family:sans-serif;">Union Member Density by State 2008-22</h3>
+
+    <!-- Create a div where the graph will take place -->
+    <div id="my_dataviz"></div>
+
+    <div class="tooltip" id="tooltip"></div>
+
+    <script>
+        const margin = { top: 30, right: 0, bottom: 30, left: 40 },
+            width = 155 - margin.left - margin.right,
+            height = 155 - margin.top - margin.bottom;
+
+        // Read the data
+        d3.csv("State_Union_Membership_Density_2008-2022.csv",
+            function (d) {
+                return { year: d3.timeParse("%Y")(d.year), mem_pct: +d.mem_pct, state: d.state };
+            }).then(function (data) {
+
+                // group the data: I want to draw one line per group
+                const sumstat = d3.group(data, d => d.state);
+
+                // What is the list of groups?
+                allKeys = Array.from(new Set(data.map(d => d.state)))
+
+                // Add an svg element for each group. They will be one beside each other and go to the next row when there is no more room available
+                const svg = d3.select("#my_dataviz")
+                    .selectAll("uniqueChart")
+                    .data(allKeys)
+                    .enter()
+                    .append("svg")
+                    .attr("width", width + margin.left + margin.right)
+                    .attr("height", height + margin.top + margin.bottom)
+                    .append("g")
+                    .attr("transform", `translate(${margin.left},${margin.top})`);
+
+                // Add X axis
+                const x = d3.scaleTime()
+                    .domain(d3.extent(data, function (d) { return d.year; }))
+                    .range([0, width]);
+                svg.append("g")
+                    .attr("transform", `translate(0, ${height})`)
+                    .call(d3.axisBottom(x)
+                        .ticks(3)
+                        .tickPadding(2)
+                    );
+
+                // Add Y axis
+                const y = d3.scaleLinear()
+                    .domain([0, d3.max(data, function (d) { return +d.mem_pct; }) + 5])
+                    .range([height, 0]);
+                svg.append("g")
+                    .call(d3.axisLeft(y).ticks(4));
+
+                // color palette
+                const color = d3.scaleOrdinal()
+                    .domain(allKeys)
+                    .range(['#045a8d', '#2b8cbe', '#08519c'])
+
+                // Define the area
+                const area = d3.area()
+                    .x(function (d) { return x(d.year); })
+                    .y0(height)
+                    .y1(function (d) { return y(d.mem_pct); });
+
+                // Draw the area
+                svg.append("path")
+                    .attr("fill", "#a6bddb")
+                    .attr("fill-opacity", .5)
+                    .attr("stroke", "none")
+                    .attr("class", "area")
+                    .attr("d", function (key) {
+                        const areaData = data.filter(d => d.state === key);
+                        return d3.area()
+                            .x(d => x(d.year))
+                            .y0(y(0))
+                            .y1(d => y(d.mem_pct))
+                            (areaData);
+                    });
+
+                // Draw the line
+                svg.append("path")
+                    .attr("fill", "none")
+                    .attr("stroke", "#08306b")
+                    .attr("stroke-width", 3)
+                    .attr("class", "line")
+                    .attr("d", function (key) {
+                        const lineData = data.filter(d => d.state === key);
+                        return d3.line()
+                            .x(d => x(d.year))
+                            .y(d => y(d.mem_pct))
+                            (lineData);
+                    })
+
+
+
+
+
+                // Add titles
+                svg.append("text")
+                    .attr("text-anchor", "middle")
+                    .attr("y", .5)
+                    .attr("x", width / 2)
+                    .text(key => key)
+                    .style("font-family", "sans-serif")
+                    .style("font-size", "9.5px")
+                    .style("font-weight", "bold");
+            });
+    </script>
+
+    <p class="subtitle is-7 has-text-grey is-centered">Source: Bureau of Labor Statistics via Unionstats.com</p>
+</body>
+
+</html>

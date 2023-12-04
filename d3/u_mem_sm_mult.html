@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <!-- Load d3.js -->
+    <script src="https://d3js.org/d3.v6.js"></script>
+    <style type="text/css">
+        .label {
+            font-size: 14px;
+            font-weight: normal;
+            font-family: sans-serif;
+        }
+
+        .grid line {
+            stroke: #e6e6e6;
+            stroke-dasharray: 2 2;
+        }
+
+
+        .label {
+            font-size: 14px;
+            font-weight: normal;
+            font-family: sans-serif;
+        }
+
+        .legend {
+            font-size: 16px;
+            font-weight: bold;
+            text-anchor: middle;
+        }
+
+        .line:hover {
+            fill: navy;
+            opacity: 0.3;
+            stroke: rgb(1, 1, 51);
+            stroke-width: 2;
+            stroke-opacity: 4;
+        }
+
+
+        #tooltip {
+            position: absolute;
+            width: 100px;
+            height: 30px;
+            padding: 2px;
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 12px;
+            font-weight: 350;
+            background: white;
+            border-radius: 8px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- Create a div where the graph will take place -->
+    <div id="my_dataviz"></div>
+
+    <script>
+
+        const margin = { top: 30, right: 0, bottom: 30, left: 50 },
+            width = 210 - margin.left - margin.right,
+            height = 210 - margin.top - margin.bottom;
+
+
+        /* const tooltip3 = d3.select("body")
+            .append("div")
+            .attr("id", "tooltip")
+            .style("opacity", 0); */
+
+
+
+        //Read the data
+        d3.csv("State_Union_Membership_Density_2008-2022.csv",
+            //.then(function (data) {
+
+            //When reading the csv, I must format variables:
+            function (d) {
+                return { year: d3.timeParse("%Y")(d.year), mem_pct: d.mem_pct, state: d.state }
+            }).then(
+                // Now I can use this dataset:
+                function (data) {
+
+                    // group the data: I want to draw one line per group
+                    const sumstat = d3.group(data, d => d.state); // nest function allows to group the calculation per level of a factor
+
+                    // What is the list of groups?
+                    allKeys = new Set(data.map(d => d.state))
+
+                    // Add an svg element for each group. The will be one beside each other and will go on the next row when no more room available
+                    const svg = d3.select("#my_dataviz")
+                        .selectAll("uniqueChart")
+                        .data(sumstat)
+                        .enter()
+                        .append("svg")
+                        .attr("width", width + margin.left + margin.right)
+                        .attr("height", height + margin.top + margin.bottom)
+                        .append("g")
+                        .attr("transform",
+                            `translate(${margin.left},${margin.top})`);
+
+                    /* // append the svg object to the body of the page
+                        const svg = d3.select("#my_dataviz")
+                        .append("svg")
+                        .attr("width", width + margin.left + margin.right + 50)
+                        .attr("height", height + margin.top + margin.bottom)
+                        .append("g")
+                        .attr("transform", `translate(${margin.left},${margin.top})`); */
+
+
+                    // Add X axis --> it is a date format
+                    const x = d3.scaleTime()
+                        .domain(d3.extent(data, function (d) { return d.year; }))
+                        .range([0, width]);
+                    svg.append("g")
+                        //.attr("class", "grid")
+                        .attr("transform", `translate(0, ${height + 5})`)
+                        .call(d3.axisBottom(x)
+                            .ticks(3)
+                            //.tickSize(-height, 0)
+                            //.tickFormat("")
+                            .tickPadding(3)
+                        );
+
+                    // Add Y axis
+                    const y = d3.scaleLinear()
+                        .domain([0, d3.max(data, function (d) { return +d.mem_pct; }) + 5])
+                        .range([height, 0]);
+                    svg.append("g")
+                        .call(d3.axisLeft(y).ticks(4));
+
+
+                    // Add the area
+                    /*    svg.append("path")
+                           .datum(data)
+                           .attr("fill", "#90d743")
+                           .attr("fill-opacity", 0.06)
+                           .attr("stroke", "#none")
+                           .attr("d", d3.area()
+                               //.curve(d3.curveCardinal)
+                               .x(function (d) { return x(d.year) })
+                               .y0(y(0))
+                               .y1(function (d) { return y(d.u_mem_pct) }) 
+                           )*/
+
+                    // add y-axis label        
+                    /*   svg.append("text")
+                          .attr("text-anchor", "end")
+                          .attr("x", -margin.top - 125)
+                          .attr("y", -margin.left + 55)
+                          .attr("transform", "rotate(-90)")
+                          .attr("fill", "black")
+                          .attr("class", "label")
+                          .text("Union Membership"); */
+
+                    // color palette
+                    const color = d3.scaleOrdinal()
+                        //(d3.schemeCategory10);
+                        //.domain(allKeys)
+                        //.range(['#e41a1c', '#377eb8', '#4daf4a', '#984ea3', '#ff7f00', '#ffff33', '#a65628', '#f781bf', '#999999'])
+                        .range(['#045a8d', '#2b8cbe', '#08519c'])
+
+                    // Draw the line
+                    svg
+                        //.selectAll(".line")
+                        .data(sumstat)
+                        //.join("path")
+                        .append("path")
+                        .attr("fill", "none")
+                        .attr("stroke", function (d) { return color(d[0]) })
+                        .attr("stroke-width", 1.5)
+                        .attr("d", function (d) {
+                            return d3.line()
+                                .x(function (d) { return x(d.year); })
+                                .y(function (d) { return y(+d.mem_pct); })
+                                (d[1])
+                        })
+                    //.attr("d", d3.line()
+                    // .x(d => x(d.year))
+                    // .y(d => y(d.u_mem_pct))
+                    //)
+
+                    // Add titles
+                    svg
+                        .append("text")
+                        .attr("text-anchor", "start")
+                        .attr("y", -5)
+                        .attr("x", 0)
+                        .text(function (d) { return (d[0]) })
+                        .style("fill", function (d) { return color(d[0]) })
+
+                        .on("mouseover", function (event, d) {
+                            d3.select("#tooltip")
+                                .attr("class", "tooltip")
+                                .attr("class", "hover")
+                                .attr("opacity", 0.5)
+                                .attr("stroke", "black")
+                                .attr("stroke-width", 1)
+                                .attr("stroke-opacity", 4);
+                            tooltip3.transition()
+                                .duration(300)
+                                .style("opacity", .9);
+                            tooltip3.html(d.year + "<br/>" + d.mem_pct)
+                                .style("left", (event.pageX) + "px")
+                                .style("top", (event.pageY - 28) + "px");
+                        })
+
+                        .on("mouseout", (event, d) => {
+                            d3.select("#tooltip")
+                                .transition()
+                                .duration(300)
+                                .style("opacity", 0);
+                        })
+
+                        .on("mousemove", (event, d) => {
+                            d3.select("#tooltip")
+                                .style("left", (event.pageX + 2) + "px")
+                                .style("top", (event.pageY + 2) + "px");
+                        })
+                })    
+    </script>
+
+    </div>
+    <p class="subtitle is-7 has-text-grey is-centered">Source: Bureau of Labor Statistics via Unionstats.com</p>
+    </section>
+
+
+</body>
+
+</html>
