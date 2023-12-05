@@ -1,0 +1,798 @@
+year,state_abbreviation,counts,state
+2008-01-01,AK,23,Alaska
+2008-01-01,AL,32,Alabama
+2008-01-01,AR,12,Arkansas
+2008-01-01,AZ,35,Arizona
+2008-01-01,CA,352,California
+2008-01-01,CO,28,Colorado
+2008-01-01,CT,74,Connecticut
+2008-01-01,DC,31,
+2008-01-01,DE,12,Delaware
+2008-01-01,FL,71,Florida
+2008-01-01,GA,47,Georgia
+2008-01-01,GU,2,
+2008-01-01,HI,29,Hawaii
+2008-01-01,IA,23,Iowa
+2008-01-01,ID,4,Idaho
+2008-01-01,IL,238,Illinois
+2008-01-01,IN,72,Indiana
+2008-01-01,KS,32,Kansas
+2008-01-01,KY,39,Kentucky
+2008-01-01,LA,22,Louisiana
+2008-01-01,MA,92,Massachusetts
+2008-01-01,MD,41,Maryland
+2008-01-01,ME,7,Maine
+2008-01-01,MI,134,Michigan
+2008-01-01,MN,73,Minnesota
+2008-01-01,MO,94,Missouri
+2008-01-01,MS,22,Mississippi
+2008-01-01,MT,21,Montana
+2008-01-01,NC,26,North Carolina
+2008-01-01,ND,6,North Dakota
+2008-01-01,NE,16,Nebraska
+2008-01-01,NH,19,New Hampshire
+2008-01-01,NJ,169,New Jersey
+2008-01-01,NM,19,New Mexico
+2008-01-01,NV,39,Nevada
+2008-01-01,NY,447,New York
+2008-01-01,OH,189,Ohio
+2008-01-01,OK,27,Oklahoma
+2008-01-01,OR,50,Oregon
+2008-01-01,PA,189,Pennsylvania
+2008-01-01,PR,44,
+2008-01-01,RI,19,Rhode Island
+2008-01-01,SC,17,South Carolina
+2008-01-01,SD,6,South Dakota
+2008-01-01,TN,30,Tennessee
+2008-01-01,TX,75,Texas
+2008-01-01,UT,8,Utah
+2008-01-01,VA,36,Virginia
+2008-01-01,VI,8,
+2008-01-01,VT,4,Vermont
+2008-01-01,WA,132,Washington
+2008-01-01,WI,78,Wisconsin
+2008-01-01,WV,16,West Virginia
+2008-01-01,WY,8,Wyoming
+2009-01-01,AK,17,Alaska
+2009-01-01,AL,21,Alabama
+2009-01-01,AR,15,Arkansas
+2009-01-01,AZ,31,Arizona
+2009-01-01,CA,422,California
+2009-01-01,CO,26,Colorado
+2009-01-01,CT,68,Connecticut
+2009-01-01,DC,64,
+2009-01-01,DE,10,Delaware
+2009-01-01,FL,62,Florida
+2009-01-01,GA,41,Georgia
+2009-01-01,HI,20,Hawaii
+2009-01-01,IA,28,Iowa
+2009-01-01,ID,11,Idaho
+2009-01-01,IL,172,Illinois
+2009-01-01,IN,64,Indiana
+2009-01-01,KS,19,Kansas
+2009-01-01,KY,15,Kentucky
+2009-01-01,LA,30,Louisiana
+2009-01-01,MA,91,Massachusetts
+2009-01-01,MD,54,Maryland
+2009-01-01,ME,10,Maine
+2009-01-01,MI,128,Michigan
+2009-01-01,MN,75,Minnesota
+2009-01-01,MO,61,Missouri
+2009-01-01,MS,21,Mississippi
+2009-01-01,MT,13,Montana
+2009-01-01,NC,18,North Carolina
+2009-01-01,ND,1,North Dakota
+2009-01-01,NE,5,Nebraska
+2009-01-01,NH,17,New Hampshire
+2009-01-01,NJ,172,New Jersey
+2009-01-01,NM,16,New Mexico
+2009-01-01,NV,30,Nevada
+2009-01-01,NY,386,New York
+2009-01-01,OH,129,Ohio
+2009-01-01,OK,21,Oklahoma
+2009-01-01,OR,53,Oregon
+2009-01-01,PA,178,Pennsylvania
+2009-01-01,PR,48,
+2009-01-01,RI,21,Rhode Island
+2009-01-01,SC,4,South Carolina
+2009-01-01,SD,3,South Dakota
+2009-01-01,TN,20,Tennessee
+2009-01-01,TX,62,Texas
+2009-01-01,UT,8,Utah
+2009-01-01,VA,52,Virginia
+2009-01-01,VI,7,
+2009-01-01,VT,4,Vermont
+2009-01-01,WA,121,Washington
+2009-01-01,WI,33,Wisconsin
+2009-01-01,WV,12,West Virginia
+2009-01-01,WY,7,Wyoming
+2010-01-01,AK,24,Alaska
+2010-01-01,AL,21,Alabama
+2010-01-01,AR,12,Arkansas
+2010-01-01,AZ,19,Arizona
+2010-01-01,CA,386,California
+2010-01-01,CO,40,Colorado
+2010-01-01,CT,66,Connecticut
+2010-01-01,DC,36,
+2010-01-01,DE,6,Delaware
+2010-01-01,FL,87,Florida
+2010-01-01,GA,45,Georgia
+2010-01-01,HI,27,Hawaii
+2010-01-01,IA,27,Iowa
+2010-01-01,ID,5,Idaho
+2010-01-01,IL,196,Illinois
+2010-01-01,IN,59,Indiana
+2010-01-01,KS,12,Kansas
+2010-01-01,KY,29,Kentucky
+2010-01-01,LA,22,Louisiana
+2010-01-01,MA,83,Massachusetts
+2010-01-01,MD,149,Maryland
+2010-01-01,ME,4,Maine
+2010-01-01,MI,127,Michigan
+2010-01-01,MN,68,Minnesota
+2010-01-01,MO,45,Missouri
+2010-01-01,MS,11,Mississippi
+2010-01-01,MT,17,Montana
+2010-01-01,NC,16,North Carolina
+2010-01-01,ND,3,North Dakota
+2010-01-01,NE,4,Nebraska
+2010-01-01,NH,13,New Hampshire
+2010-01-01,NJ,216,New Jersey
+2010-01-01,NM,17,New Mexico
+2010-01-01,NV,34,Nevada
+2010-01-01,NY,379,New York
+2010-01-01,OH,107,Ohio
+2010-01-01,OK,21,Oklahoma
+2010-01-01,OR,44,Oregon
+2010-01-01,PA,225,Pennsylvania
+2010-01-01,PR,39,
+2010-01-01,RI,25,Rhode Island
+2010-01-01,SC,6,South Carolina
+2010-01-01,SD,3,South Dakota
+2010-01-01,TN,24,Tennessee
+2010-01-01,TX,102,Texas
+2010-01-01,UT,1,Utah
+2010-01-01,VA,49,Virginia
+2010-01-01,VI,7,
+2010-01-01,VT,7,Vermont
+2010-01-01,WA,115,Washington
+2010-01-01,WI,30,Wisconsin
+2010-01-01,WV,15,West Virginia
+2010-01-01,WY,1,Wyoming
+2011-01-01,AK,17,Alaska
+2011-01-01,AL,11,Alabama
+2011-01-01,AR,9,Arkansas
+2011-01-01,AZ,27,Arizona
+2011-01-01,CA,321,California
+2011-01-01,CO,22,Colorado
+2011-01-01,CT,52,Connecticut
+2011-01-01,DC,35,
+2011-01-01,DE,12,Delaware
+2011-01-01,FL,71,Florida
+2011-01-01,GA,40,Georgia
+2011-01-01,GU,1,
+2011-01-01,HI,9,Hawaii
+2011-01-01,IA,15,Iowa
+2011-01-01,ID,6,Idaho
+2011-01-01,IL,171,Illinois
+2011-01-01,IN,50,Indiana
+2011-01-01,KS,14,Kansas
+2011-01-01,KY,36,Kentucky
+2011-01-01,LA,18,Louisiana
+2011-01-01,MA,71,Massachusetts
+2011-01-01,MD,83,Maryland
+2011-01-01,ME,3,Maine
+2011-01-01,MI,132,Michigan
+2011-01-01,MN,67,Minnesota
+2011-01-01,MO,47,Missouri
+2011-01-01,MS,16,Mississippi
+2011-01-01,MT,16,Montana
+2011-01-01,NC,19,North Carolina
+2011-01-01,ND,2,North Dakota
+2011-01-01,NE,3,Nebraska
+2011-01-01,NH,6,New Hampshire
+2011-01-01,NJ,177,New Jersey
+2011-01-01,NM,10,New Mexico
+2011-01-01,NV,42,Nevada
+2011-01-01,NY,350,New York
+2011-01-01,OH,132,Ohio
+2011-01-01,OK,14,Oklahoma
+2011-01-01,OR,55,Oregon
+2011-01-01,PA,156,Pennsylvania
+2011-01-01,PR,23,
+2011-01-01,RI,14,Rhode Island
+2011-01-01,SC,11,South Carolina
+2011-01-01,SD,2,South Dakota
+2011-01-01,TN,23,Tennessee
+2011-01-01,TX,58,Texas
+2011-01-01,UT,7,Utah
+2011-01-01,VA,61,Virginia
+2011-01-01,VI,6,
+2011-01-01,WA,106,Washington
+2011-01-01,WI,36,Wisconsin
+2011-01-01,WV,35,West Virginia
+2011-01-01,WY,4,Wyoming
+2012-01-01,AK,15,Alaska
+2012-01-01,AL,21,Alabama
+2012-01-01,AR,4,Arkansas
+2012-01-01,AZ,23,Arizona
+2012-01-01,CA,311,California
+2012-01-01,CO,18,Colorado
+2012-01-01,CT,60,Connecticut
+2012-01-01,DC,37,
+2012-01-01,DE,4,Delaware
+2012-01-01,FL,48,Florida
+2012-01-01,GA,18,Georgia
+2012-01-01,GU,1,
+2012-01-01,HI,21,Hawaii
+2012-01-01,IA,20,Iowa
+2012-01-01,ID,10,Idaho
+2012-01-01,IL,172,Illinois
+2012-01-01,IN,45,Indiana
+2012-01-01,KS,12,Kansas
+2012-01-01,KY,33,Kentucky
+2012-01-01,LA,16,Louisiana
+2012-01-01,MA,76,Massachusetts
+2012-01-01,MD,47,Maryland
+2012-01-01,ME,8,Maine
+2012-01-01,MI,125,Michigan
+2012-01-01,MN,68,Minnesota
+2012-01-01,MO,80,Missouri
+2012-01-01,MS,5,Mississippi
+2012-01-01,MT,6,Montana
+2012-01-01,NC,17,North Carolina
+2012-01-01,ND,3,North Dakota
+2012-01-01,NE,10,Nebraska
+2012-01-01,NH,9,New Hampshire
+2012-01-01,NJ,177,New Jersey
+2012-01-01,NM,16,New Mexico
+2012-01-01,NV,35,Nevada
+2012-01-01,NY,338,New York
+2012-01-01,OH,104,Ohio
+2012-01-01,OK,9,Oklahoma
+2012-01-01,OR,34,Oregon
+2012-01-01,PA,173,Pennsylvania
+2012-01-01,PR,43,
+2012-01-01,RI,31,Rhode Island
+2012-01-01,SC,4,South Carolina
+2012-01-01,SD,2,South Dakota
+2012-01-01,TN,22,Tennessee
+2012-01-01,TX,73,Texas
+2012-01-01,UT,9,Utah
+2012-01-01,VA,45,Virginia
+2012-01-01,VI,2,
+2012-01-01,VT,7,Vermont
+2012-01-01,WA,92,Washington
+2012-01-01,WI,36,Wisconsin
+2012-01-01,WV,23,West Virginia
+2013-01-01,AK,15,Alaska
+2013-01-01,AL,16,Alabama
+2013-01-01,AR,4,Arkansas
+2013-01-01,AZ,24,Arizona
+2013-01-01,CA,333,California
+2013-01-01,CO,21,Colorado
+2013-01-01,CT,55,Connecticut
+2013-01-01,DC,74,
+2013-01-01,DE,11,Delaware
+2013-01-01,FL,69,Florida
+2013-01-01,GA,27,Georgia
+2013-01-01,HI,20,Hawaii
+2013-01-01,IA,19,Iowa
+2013-01-01,ID,2,Idaho
+2013-01-01,IL,178,Illinois
+2013-01-01,IN,52,Indiana
+2013-01-01,KS,14,Kansas
+2013-01-01,KY,12,Kentucky
+2013-01-01,LA,16,Louisiana
+2013-01-01,MA,74,Massachusetts
+2013-01-01,MD,70,Maryland
+2013-01-01,ME,19,Maine
+2013-01-01,MI,85,Michigan
+2013-01-01,MN,49,Minnesota
+2013-01-01,MO,56,Missouri
+2013-01-01,MS,11,Mississippi
+2013-01-01,MT,13,Montana
+2013-01-01,NC,21,North Carolina
+2013-01-01,ND,2,North Dakota
+2013-01-01,NE,3,Nebraska
+2013-01-01,NH,9,New Hampshire
+2013-01-01,NJ,169,New Jersey
+2013-01-01,NM,12,New Mexico
+2013-01-01,NV,48,Nevada
+2013-01-01,NY,340,New York
+2013-01-01,OH,107,Ohio
+2013-01-01,OK,6,Oklahoma
+2013-01-01,OR,44,Oregon
+2013-01-01,PA,199,Pennsylvania
+2013-01-01,PR,49,
+2013-01-01,RI,21,Rhode Island
+2013-01-01,SC,16,South Carolina
+2013-01-01,SD,3,South Dakota
+2013-01-01,TN,22,Tennessee
+2013-01-01,TX,70,Texas
+2013-01-01,UT,8,Utah
+2013-01-01,VA,56,Virginia
+2013-01-01,VT,5,Vermont
+2013-01-01,WA,84,Washington
+2013-01-01,WI,29,Wisconsin
+2013-01-01,WV,26,West Virginia
+2013-01-01,WY,2,Wyoming
+2014-01-01,AK,16,Alaska
+2014-01-01,AL,19,Alabama
+2014-01-01,AR,7,Arkansas
+2014-01-01,AZ,15,Arizona
+2014-01-01,CA,361,California
+2014-01-01,CO,22,Colorado
+2014-01-01,CT,54,Connecticut
+2014-01-01,DC,62,
+2014-01-01,DE,7,Delaware
+2014-01-01,FL,65,Florida
+2014-01-01,GA,29,Georgia
+2014-01-01,HI,22,Hawaii
+2014-01-01,IA,10,Iowa
+2014-01-01,ID,5,Idaho
+2014-01-01,IL,220,Illinois
+2014-01-01,IN,48,Indiana
+2014-01-01,KS,19,Kansas
+2014-01-01,KY,32,Kentucky
+2014-01-01,LA,11,Louisiana
+2014-01-01,MA,76,Massachusetts
+2014-01-01,MD,95,Maryland
+2014-01-01,ME,10,Maine
+2014-01-01,MI,99,Michigan
+2014-01-01,MN,78,Minnesota
+2014-01-01,MO,48,Missouri
+2014-01-01,MS,17,Mississippi
+2014-01-01,MT,14,Montana
+2014-01-01,NC,20,North Carolina
+2014-01-01,ND,4,North Dakota
+2014-01-01,NE,8,Nebraska
+2014-01-01,NH,9,New Hampshire
+2014-01-01,NJ,148,New Jersey
+2014-01-01,NM,22,New Mexico
+2014-01-01,NV,51,Nevada
+2014-01-01,NY,345,New York
+2014-01-01,OH,104,Ohio
+2014-01-01,OK,17,Oklahoma
+2014-01-01,OR,41,Oregon
+2014-01-01,PA,173,Pennsylvania
+2014-01-01,PR,35,
+2014-01-01,RI,18,Rhode Island
+2014-01-01,SC,14,South Carolina
+2014-01-01,TN,13,Tennessee
+2014-01-01,TX,77,Texas
+2014-01-01,UT,8,Utah
+2014-01-01,VA,47,Virginia
+2014-01-01,VI,7,
+2014-01-01,VT,7,Vermont
+2014-01-01,WA,82,Washington
+2014-01-01,WI,43,Wisconsin
+2014-01-01,WV,30,West Virginia
+2014-01-01,WY,2,Wyoming
+2015-01-01,AK,11,Alaska
+2015-01-01,AL,23,Alabama
+2015-01-01,AR,9,Arkansas
+2015-01-01,AZ,27,Arizona
+2015-01-01,CA,351,California
+2015-01-01,CO,20,Colorado
+2015-01-01,CT,50,Connecticut
+2015-01-01,DC,49,
+2015-01-01,DE,8,Delaware
+2015-01-01,FL,69,Florida
+2015-01-01,GA,34,Georgia
+2015-01-01,GU,1,
+2015-01-01,HI,15,Hawaii
+2015-01-01,IA,15,Iowa
+2015-01-01,ID,10,Idaho
+2015-01-01,IL,175,Illinois
+2015-01-01,IN,31,Indiana
+2015-01-01,KS,25,Kansas
+2015-01-01,KY,41,Kentucky
+2015-01-01,LA,14,Louisiana
+2015-01-01,MA,75,Massachusetts
+2015-01-01,MD,60,Maryland
+2015-01-01,ME,5,Maine
+2015-01-01,MI,109,Michigan
+2015-01-01,MN,76,Minnesota
+2015-01-01,MO,48,Missouri
+2015-01-01,MS,6,Mississippi
+2015-01-01,MT,18,Montana
+2015-01-01,NC,12,North Carolina
+2015-01-01,ND,6,North Dakota
+2015-01-01,NE,7,Nebraska
+2015-01-01,NH,6,New Hampshire
+2015-01-01,NJ,147,New Jersey
+2015-01-01,NM,14,New Mexico
+2015-01-01,NV,50,Nevada
+2015-01-01,NY,441,New York
+2015-01-01,OH,98,Ohio
+2015-01-01,OK,10,Oklahoma
+2015-01-01,OR,40,Oregon
+2015-01-01,PA,148,Pennsylvania
+2015-01-01,PR,49,
+2015-01-01,RI,16,Rhode Island
+2015-01-01,SC,8,South Carolina
+2015-01-01,TN,19,Tennessee
+2015-01-01,TX,66,Texas
+2015-01-01,UT,14,Utah
+2015-01-01,VA,43,Virginia
+2015-01-01,VI,5,
+2015-01-01,VT,4,Vermont
+2015-01-01,WA,88,Washington
+2015-01-01,WI,29,Wisconsin
+2015-01-01,WV,22,West Virginia
+2015-01-01,WY,4,Wyoming
+2016-01-01,AK,9,Alaska
+2016-01-01,AL,23,Alabama
+2016-01-01,AR,8,Arkansas
+2016-01-01,AZ,26,Arizona
+2016-01-01,CA,400,California
+2016-01-01,CO,42,Colorado
+2016-01-01,CT,50,Connecticut
+2016-01-01,DC,44,
+2016-01-01,DE,7,Delaware
+2016-01-01,FL,68,Florida
+2016-01-01,GA,23,Georgia
+2016-01-01,GU,2,
+2016-01-01,HI,30,Hawaii
+2016-01-01,IA,20,Iowa
+2016-01-01,ID,3,Idaho
+2016-01-01,IL,131,Illinois
+2016-01-01,IN,37,Indiana
+2016-01-01,KS,11,Kansas
+2016-01-01,KY,22,Kentucky
+2016-01-01,LA,6,Louisiana
+2016-01-01,MA,67,Massachusetts
+2016-01-01,MD,68,Maryland
+2016-01-01,ME,5,Maine
+2016-01-01,MI,95,Michigan
+2016-01-01,MN,66,Minnesota
+2016-01-01,MO,34,Missouri
+2016-01-01,MS,6,Mississippi
+2016-01-01,MT,11,Montana
+2016-01-01,NC,15,North Carolina
+2016-01-01,ND,1,North Dakota
+2016-01-01,NE,4,Nebraska
+2016-01-01,NH,19,New Hampshire
+2016-01-01,NJ,139,New Jersey
+2016-01-01,NM,9,New Mexico
+2016-01-01,NV,42,Nevada
+2016-01-01,NY,294,New York
+2016-01-01,OH,89,Ohio
+2016-01-01,OK,6,Oklahoma
+2016-01-01,OR,33,Oregon
+2016-01-01,PA,156,Pennsylvania
+2016-01-01,PR,27,
+2016-01-01,RI,19,Rhode Island
+2016-01-01,SC,8,South Carolina
+2016-01-01,TN,18,Tennessee
+2016-01-01,TX,55,Texas
+2016-01-01,UT,6,Utah
+2016-01-01,VA,46,Virginia
+2016-01-01,VI,6,
+2016-01-01,VT,6,Vermont
+2016-01-01,WA,89,Washington
+2016-01-01,WI,22,Wisconsin
+2016-01-01,WV,8,West Virginia
+2016-01-01,WY,1,Wyoming
+2017-01-01,AK,11,Alaska
+2017-01-01,AL,20,Alabama
+2017-01-01,AR,11,Arkansas
+2017-01-01,AZ,33,Arizona
+2017-01-01,CA,385,California
+2017-01-01,CO,39,Colorado
+2017-01-01,CT,45,Connecticut
+2017-01-01,DC,53,
+2017-01-01,DE,15,Delaware
+2017-01-01,FL,48,Florida
+2017-01-01,GA,22,Georgia
+2017-01-01,GU,1,
+2017-01-01,HI,19,Hawaii
+2017-01-01,IA,18,Iowa
+2017-01-01,ID,12,Idaho
+2017-01-01,IL,123,Illinois
+2017-01-01,IN,37,Indiana
+2017-01-01,KS,13,Kansas
+2017-01-01,KY,20,Kentucky
+2017-01-01,LA,16,Louisiana
+2017-01-01,MA,78,Massachusetts
+2017-01-01,MD,58,Maryland
+2017-01-01,ME,5,Maine
+2017-01-01,MI,103,Michigan
+2017-01-01,MN,54,Minnesota
+2017-01-01,MO,43,Missouri
+2017-01-01,MS,7,Mississippi
+2017-01-01,MT,24,Montana
+2017-01-01,NC,11,North Carolina
+2017-01-01,ND,4,North Dakota
+2017-01-01,NE,1,Nebraska
+2017-01-01,NH,12,New Hampshire
+2017-01-01,NJ,106,New Jersey
+2017-01-01,NM,14,New Mexico
+2017-01-01,NV,46,Nevada
+2017-01-01,NY,301,New York
+2017-01-01,OH,84,Ohio
+2017-01-01,OK,6,Oklahoma
+2017-01-01,OR,31,Oregon
+2017-01-01,PA,129,Pennsylvania
+2017-01-01,PR,21,
+2017-01-01,RI,18,Rhode Island
+2017-01-01,SC,6,South Carolina
+2017-01-01,SD,5,South Dakota
+2017-01-01,TN,22,Tennessee
+2017-01-01,TX,75,Texas
+2017-01-01,UT,7,Utah
+2017-01-01,VA,48,Virginia
+2017-01-01,VI,3,
+2017-01-01,VT,2,Vermont
+2017-01-01,WA,82,Washington
+2017-01-01,WI,21,Wisconsin
+2017-01-01,WV,17,West Virginia
+2017-01-01,WY,2,Wyoming
+2018-01-01,AE,1,
+2018-01-01,AK,11,Alaska
+2018-01-01,AL,14,Alabama
+2018-01-01,AR,6,Arkansas
+2018-01-01,AZ,22,Arizona
+2018-01-01,CA,278,California
+2018-01-01,CO,16,Colorado
+2018-01-01,CT,29,Connecticut
+2018-01-01,DC,53,
+2018-01-01,DE,5,Delaware
+2018-01-01,FL,49,Florida
+2018-01-01,GA,26,Georgia
+2018-01-01,GU,3,
+2018-01-01,HI,17,Hawaii
+2018-01-01,IA,12,Iowa
+2018-01-01,ID,7,Idaho
+2018-01-01,IL,128,Illinois
+2018-01-01,IN,54,Indiana
+2018-01-01,KS,11,Kansas
+2018-01-01,KY,24,Kentucky
+2018-01-01,LA,9,Louisiana
+2018-01-01,MA,66,Massachusetts
+2018-01-01,MD,55,Maryland
+2018-01-01,ME,5,Maine
+2018-01-01,MI,100,Michigan
+2018-01-01,MN,46,Minnesota
+2018-01-01,MO,36,Missouri
+2018-01-01,MS,4,Mississippi
+2018-01-01,MT,8,Montana
+2018-01-01,NC,14,North Carolina
+2018-01-01,ND,3,North Dakota
+2018-01-01,NE,3,Nebraska
+2018-01-01,NH,2,New Hampshire
+2018-01-01,NJ,111,New Jersey
+2018-01-01,NM,9,New Mexico
+2018-01-01,NV,39,Nevada
+2018-01-01,NY,230,New York
+2018-01-01,OH,62,Ohio
+2018-01-01,OK,11,Oklahoma
+2018-01-01,OR,46,Oregon
+2018-01-01,PA,116,Pennsylvania
+2018-01-01,PR,29,
+2018-01-01,RI,11,Rhode Island
+2018-01-01,SC,5,South Carolina
+2018-01-01,SD,1,South Dakota
+2018-01-01,TN,17,Tennessee
+2018-01-01,TX,46,Texas
+2018-01-01,UT,3,Utah
+2018-01-01,VA,35,Virginia
+2018-01-01,VI,3,
+2018-01-01,VT,1,Vermont
+2018-01-01,WA,75,Washington
+2018-01-01,WI,27,Wisconsin
+2018-01-01,WV,10,West Virginia
+2018-01-01,WY,3,Wyoming
+2019-01-01,AK,7,Alaska
+2019-01-01,AL,10,Alabama
+2019-01-01,AR,3,Arkansas
+2019-01-01,AZ,15,Arizona
+2019-01-01,CA,306,California
+2019-01-01,CO,21,Colorado
+2019-01-01,CT,41,Connecticut
+2019-01-01,DC,36,
+2019-01-01,DE,8,Delaware
+2019-01-01,FL,33,Florida
+2019-01-01,GA,26,Georgia
+2019-01-01,GU,3,
+2019-01-01,HI,22,Hawaii
+2019-01-01,IA,10,Iowa
+2019-01-01,ID,9,Idaho
+2019-01-01,IL,160,Illinois
+2019-01-01,IN,31,Indiana
+2019-01-01,KS,5,Kansas
+2019-01-01,KY,23,Kentucky
+2019-01-01,LA,6,Louisiana
+2019-01-01,MA,72,Massachusetts
+2019-01-01,MD,64,Maryland
+2019-01-01,ME,8,Maine
+2019-01-01,MI,70,Michigan
+2019-01-01,MN,31,Minnesota
+2019-01-01,MO,36,Missouri
+2019-01-01,MS,4,Mississippi
+2019-01-01,MT,18,Montana
+2019-01-01,NC,23,North Carolina
+2019-01-01,ND,8,North Dakota
+2019-01-01,NE,6,Nebraska
+2019-01-01,NH,8,New Hampshire
+2019-01-01,NJ,120,New Jersey
+2019-01-01,NM,16,New Mexico
+2019-01-01,NV,61,Nevada
+2019-01-01,NY,285,New York
+2019-01-01,OH,61,Ohio
+2019-01-01,OK,13,Oklahoma
+2019-01-01,OR,47,Oregon
+2019-01-01,PA,117,Pennsylvania
+2019-01-01,PR,33,
+2019-01-01,RI,14,Rhode Island
+2019-01-01,SC,5,South Carolina
+2019-01-01,TN,8,Tennessee
+2019-01-01,TX,69,Texas
+2019-01-01,UT,6,Utah
+2019-01-01,VA,29,Virginia
+2019-01-01,VI,2,
+2019-01-01,VT,3,Vermont
+2019-01-01,WA,79,Washington
+2019-01-01,WI,25,Wisconsin
+2019-01-01,WV,25,West Virginia
+2019-01-01,WY,1,Wyoming
+2020-01-01,AK,12,Alaska
+2020-01-01,AL,10,Alabama
+2020-01-01,AR,8,Arkansas
+2020-01-01,AZ,16,Arizona
+2020-01-01,CA,226,California
+2020-01-01,CO,13,Colorado
+2020-01-01,CT,28,Connecticut
+2020-01-01,DC,34,
+2020-01-01,DE,8,Delaware
+2020-01-01,FL,40,Florida
+2020-01-01,GA,13,Georgia
+2020-01-01,GU,1,
+2020-01-01,HI,24,Hawaii
+2020-01-01,IA,7,Iowa
+2020-01-01,ID,9,Idaho
+2020-01-01,IL,111,Illinois
+2020-01-01,IN,25,Indiana
+2020-01-01,KS,9,Kansas
+2020-01-01,KY,17,Kentucky
+2020-01-01,LA,4,Louisiana
+2020-01-01,MA,37,Massachusetts
+2020-01-01,MD,36,Maryland
+2020-01-01,ME,5,Maine
+2020-01-01,MI,71,Michigan
+2020-01-01,MN,45,Minnesota
+2020-01-01,MO,25,Missouri
+2020-01-01,MS,3,Mississippi
+2020-01-01,MT,11,Montana
+2020-01-01,NC,13,North Carolina
+2020-01-01,NE,4,Nebraska
+2020-01-01,NH,2,New Hampshire
+2020-01-01,NJ,68,New Jersey
+2020-01-01,NM,10,New Mexico
+2020-01-01,NV,23,Nevada
+2020-01-01,NY,211,New York
+2020-01-01,OH,57,Ohio
+2020-01-01,OK,3,Oklahoma
+2020-01-01,OR,28,Oregon
+2020-01-01,PA,113,Pennsylvania
+2020-01-01,PR,11,
+2020-01-01,RI,17,Rhode Island
+2020-01-01,SC,4,South Carolina
+2020-01-01,SD,4,South Dakota
+2020-01-01,TN,10,Tennessee
+2020-01-01,TX,60,Texas
+2020-01-01,UT,3,Utah
+2020-01-01,VA,38,Virginia
+2020-01-01,VI,1,
+2020-01-01,VT,2,Vermont
+2020-01-01,WA,70,Washington
+2020-01-01,WI,19,Wisconsin
+2020-01-01,WV,12,West Virginia
+2020-01-01,WY,4,Wyoming
+2021-01-01,AK,4,Alaska
+2021-01-01,AL,9,Alabama
+2021-01-01,AR,4,Arkansas
+2021-01-01,AZ,22,Arizona
+2021-01-01,CA,220,California
+2021-01-01,CO,29,Colorado
+2021-01-01,CT,48,Connecticut
+2021-01-01,DC,47,
+2021-01-01,DE,8,Delaware
+2021-01-01,FL,26,Florida
+2021-01-01,GA,17,Georgia
+2021-01-01,GU,2,
+2021-01-01,HI,20,Hawaii
+2021-01-01,IA,7,Iowa
+2021-01-01,ID,6,Idaho
+2021-01-01,IL,129,Illinois
+2021-01-01,IN,24,Indiana
+2021-01-01,KS,8,Kansas
+2021-01-01,KY,15,Kentucky
+2021-01-01,LA,8,Louisiana
+2021-01-01,MA,42,Massachusetts
+2021-01-01,MD,35,Maryland
+2021-01-01,ME,6,Maine
+2021-01-01,MI,54,Michigan
+2021-01-01,MN,53,Minnesota
+2021-01-01,MO,39,Missouri
+2021-01-01,MS,2,Mississippi
+2021-01-01,MT,8,Montana
+2021-01-01,NC,11,North Carolina
+2021-01-01,ND,1,North Dakota
+2021-01-01,NE,2,Nebraska
+2021-01-01,NH,7,New Hampshire
+2021-01-01,NJ,80,New Jersey
+2021-01-01,NM,7,New Mexico
+2021-01-01,NV,16,Nevada
+2021-01-01,NY,225,New York
+2021-01-01,OH,51,Ohio
+2021-01-01,OK,3,Oklahoma
+2021-01-01,OR,64,Oregon
+2021-01-01,PA,111,Pennsylvania
+2021-01-01,PR,30,
+2021-01-01,RI,17,Rhode Island
+2021-01-01,SC,3,South Carolina
+2021-01-01,SD,2,South Dakota
+2021-01-01,TN,19,Tennessee
+2021-01-01,TX,50,Texas
+2021-01-01,UT,7,Utah
+2021-01-01,VA,27,Virginia
+2021-01-01,VI,1,
+2021-01-01,VT,4,Vermont
+2021-01-01,WA,91,Washington
+2021-01-01,WI,23,Wisconsin
+2021-01-01,WV,9,West Virginia
+2021-01-01,WY,2,Wyoming
+2022-01-01,AK,11,Alaska
+2022-01-01,AL,14,Alabama
+2022-01-01,AR,8,Arkansas
+2022-01-01,AZ,32,Arizona
+2022-01-01,CA,375,California
+2022-01-01,CO,47,Colorado
+2022-01-01,CT,49,Connecticut
+2022-01-01,DC,44,
+2022-01-01,DE,8,Delaware
+2022-01-01,FL,46,Florida
+2022-01-01,GA,31,Georgia
+2022-01-01,HI,18,Hawaii
+2022-01-01,IA,14,Iowa
+2022-01-01,ID,10,Idaho
+2022-01-01,IL,172,Illinois
+2022-01-01,IN,29,Indiana
+2022-01-01,KS,12,Kansas
+2022-01-01,KY,31,Kentucky
+2022-01-01,LA,14,Louisiana
+2022-01-01,MA,106,Massachusetts
+2022-01-01,MD,71,Maryland
+2022-01-01,ME,13,Maine
+2022-01-01,MI,88,Michigan
+2022-01-01,MN,70,Minnesota
+2022-01-01,MO,67,Missouri
+2022-01-01,MS,7,Mississippi
+2022-01-01,MT,9,Montana
+2022-01-01,NC,23,North Carolina
+2022-01-01,ND,2,North Dakota
+2022-01-01,NE,5,Nebraska
+2022-01-01,NH,5,New Hampshire
+2022-01-01,NJ,89,New Jersey
+2022-01-01,NM,19,New Mexico
+2022-01-01,NV,32,Nevada
+2022-01-01,NY,281,New York
+2022-01-01,OH,81,Ohio
+2022-01-01,OK,13,Oklahoma
+2022-01-01,OR,129,Oregon
+2022-01-01,PA,143,Pennsylvania
+2022-01-01,PR,20,
+2022-01-01,RI,12,Rhode Island
+2022-01-01,SC,7,South Carolina
+2022-01-01,SD,1,South Dakota
+2022-01-01,TN,22,Tennessee
+2022-01-01,TX,81,Texas
+2022-01-01,UT,11,Utah
+2022-01-01,VA,46,Virginia
+2022-01-01,VT,14,Vermont
+2022-01-01,WA,126,Washington
+2022-01-01,WI,29,Wisconsin
+2022-01-01,WV,10,West Virginia
+2022-01-01,WY,2,Wyoming
