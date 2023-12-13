@@ -71,6 +71,11 @@
     <div class="tooltip" id="tooltip"></div>
 
     <script>
+        const tooltip = d3.select("body")
+            .append("div")
+            .attr("id", "tooltip")
+            .style("opacity", 0);
+
         const margin = { top: 30, right: 0, bottom: 30, left: 40 },
             width = 155 - margin.left - margin.right,
             height = 155 - margin.top - margin.bottom;

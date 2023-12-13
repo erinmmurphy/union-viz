@@ -57,12 +57,12 @@
 </head>
 
 <body>
-    <h3 style="font-family:sans-serif;">Average Union Membership Density by State 2008-22</h3>
+    <h3 style="font-family:sans-serif;">Petitions for Union Elections Filed by State 2008-22</h3>
 
     <!-- Create a div where the graph will take place -->
     <div id="my_dataviz"></div>
 
-    <button onclick="toggleSort()">Toggle Sort</button>
+    <!--<button onclick="toggleSort()">Toggle Sort</button> -->
     <div id="tooltip" style="position: absolute; opacity: 0; font-family: sans-serif; font-size: 10px;"></div>
 
     <script>
@@ -78,9 +78,9 @@
 
 
         // Read the data
-        d3.csv("State_Union_Membership_Density_2008-2022.csv",
+        d3.csv("cases_filed_st_yr.csv",
             function (d) {
-                return { year: d3.timeParse("%Y")(d.year), mem_pct: +d.mem_pct, state: d.state };
+                return { year: d3.timeParse("%Y")(d.year), counts: +d.counts, state: d.state };
             }).then(function (data) {
 
                 // group the data: I want to draw one line per group
@@ -113,7 +113,7 @@
 
                 // Add Y axis
                 const y = d3.scaleLinear()
-                    .domain([0, d3.max(data, function (d) { return +d.mem_pct; }) + 5])
+                    .domain([0, d3.max(data, function (d) { return +d.counts; }) + 50])
                     .range([height, 0]);
                 svg.append("g")
                     .call(d3.axisLeft(y).ticks(4));
@@ -126,15 +126,15 @@
                 // Draw the area
                 svg.append("path")
                     //.attr("fill", d => color(d))
-                    .attr("fill", "#a6bddb")
-                    .attr("fill-opacity", .5)
+                    .attr("fill", "#8c6bb1")
+                    .attr("fill-opacity", .2)
                     .attr("stroke", "none")
                     .attr("d", function (key) {
                         const areaData = data.filter(d => d.state === key);
                         return d3.area()
                             .x(d => x(d.year))
                             .y0(y(0))
-                            .y1(d => y(d.mem_pct))
+                            .y1(d => y(d.counts))
                             (areaData);
                     });
 
@@ -142,13 +142,13 @@
                 svg.append("path")
                     .attr("fill", "none")
                     //.attr("stroke", d => color(d))
-                    .attr("stroke", "#08306b")
+                    .attr("stroke", "#4d004b")
                     .attr("stroke-width", 2)
                     .attr("d", function (key) {
                         const lineData = data.filter(d => d.state === key);
                         return d3.line()
                             .x(d => x(d.year))
-                            .y(d => y(d.mem_pct))
+                            .y(d => y(d.counts))
                             (lineData);
                     });
 
@@ -167,7 +167,7 @@
     </script>
 
     </div>
-    <p class="subtitle is-7 has-text-grey is-centered">Source: Bureau of Labor Statistics via Unionstats.com</p>
+    <p class="subtitle is-7 has-text-grey is-centered">Source: National Labor Relations Board</p>
     </section>
 
 
